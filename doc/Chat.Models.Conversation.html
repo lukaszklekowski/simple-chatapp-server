@@ -1,0 +1,524 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.18.1">
+    <title>Chat.Models.Conversation – Chat Server v0.0.1</title>
+    <link rel="stylesheet" href="dist/app-c922dbe7ef.css" />
+    
+    <script src="dist/sidebar_items-b243c64628.js"></script>
+    
+    
+    
+    
+  </head>
+  <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+
+    <div class="main">
+<button class="sidebar-toggle">
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
+</button>
+<section class="sidebar">
+
+  
+  <a href="api-reference.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Chat Server
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.0.1
+      </h2>
+    </div>
+    
+  </a>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="search" aria-label="Search" autocomplete="off" />
+  </form>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">Chat Server v0.0.1</small>
+        Chat.Models.Conversation
+        
+          <a href="https://gitlab.thenflash.com/mwo/chat-server" title="View Source" class="view-source" rel="help">
+            <span class="icon-code" aria-hidden="true"></span>
+            <span class="sr-only">View Source</span>
+          </a>
+        
+      </h1>
+
+      
+        <section id="moduledoc">
+          <p>Ecto Model for Conversation table.</p>
+
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Summary
+          </h1>
+          
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#add_user/2">add_user(conversation_id, user_id)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Function for adding user to conversation</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#change_info/2">change_info(con_id, arg2)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Function for changing conversation details</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_message_count/1">get_message_count(con_id)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Function for getting amount of messages in conversation</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_messages/2">get_messages(conversation_id, user_id)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Function for getting messages from conversation for specified user</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_messages/4">get_messages(conversation_id, before_id, count, user_id)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Function for getting messages from conversation for specified user</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#get_users/1">get_users(conversation_id)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Get users of conversations</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#in_conversation?/2">in_conversation?(conversation_id, user_id)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Check if user is in conversation?</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#new/2">new(name, users)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Function for creating new conversations</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#read/3">read(conversation_id, user_id, message_id)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Function for setting recently readed message for user on conversation</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#remove_user/2">remove_user(conversation_id, user_id)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Function for removing user from conversation</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+        </section>
+      
+
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="add_user/2">
+  
+  
+  <div class="detail-header">
+    <a href="#add_user/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">add_user(conversation_id, user_id)</span>
+    
+      <a href="https://gitlab.thenflash.com/mwo/chat-server" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>  Function for adding user to conversation.</p>
+<p>  Parameters:<br />
+  <code class="inline">conversation_id</code> - ID of conversation. Requires integer<br />
+  <code class="inline">user_id</code> - ID of user. Requires integer</p>
+<p>  Returns Tuple:<br/>
+  On success: <code class="inline">{:ok, user}</code>, where user is added user<br />
+  On fail: <code class="inline">{:error, reason}</code>, where reason is atom representing reason for failing.</p>
+
+  </section>
+</div>
+<div class="detail" id="change_info/2">
+  
+  
+  <div class="detail-header">
+    <a href="#change_info/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">change_info(con_id, arg2)</span>
+    
+      <a href="https://gitlab.thenflash.com/mwo/chat-server" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>  Function for changing conversation details.</p>
+<p>  Parameters:<br />
+  <code class="inline">con_id</code> - ID of conversation. Requires integer<br />
+  <code class="inline">%{&quot;id&quot; =&gt; c_id, &quot;title&quot; =&gt; con_name, &quot;avatar&quot; =&gt; con_avatar}</code>, where id is conversation ID, title is conversation title and avatar is conversation avatar.</p>
+<p>  Returns Tuple:<br/>
+  On success: <code class="inline">{:ok, conversation}</code>, where conversation is conversation that changed.<br />
+  On fail: <code class="inline">{:error, reason}</code>, where reason is atom representing reason for failing.</p>
+
+  </section>
+</div>
+<div class="detail" id="get_message_count/1">
+  
+  
+  <div class="detail-header">
+    <a href="#get_message_count/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">get_message_count(con_id)</span>
+    
+      <a href="https://gitlab.thenflash.com/mwo/chat-server" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>  Function for getting amount of messages in conversation.</p>
+<p>  Parameters:<br />
+  <code class="inline">con_id</code> - ID of conversation. Requires integer<br /></p>
+<p>  Returns message count as integer.</p>
+
+  </section>
+</div>
+<div class="detail" id="get_messages/2">
+  
+  
+  <div class="detail-header">
+    <a href="#get_messages/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">get_messages(conversation_id, user_id)</span>
+    
+      <a href="https://gitlab.thenflash.com/mwo/chat-server" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>  Function for getting messages from conversation for specified user.</p>
+<p>  We request user_id, becouse we do not want to show user messages from users that he has blocked.</p>
+<p>  Parameters:<br />
+  <code class="inline">conversation_id</code> - ID of conversation. Requires integer<br />
+  <code class="inline">user_id</code> - ID of user. Requires integer</p>
+<p>  Returns list of messages.</p>
+
+  </section>
+</div>
+<div class="detail" id="get_messages/4">
+  
+  
+  <div class="detail-header">
+    <a href="#get_messages/4" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">get_messages(conversation_id, before_id, count, user_id)</span>
+    
+      <a href="https://gitlab.thenflash.com/mwo/chat-server" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>  Function for getting messages from conversation for specified user.</p>
+<p>  We request user_id, becouse we do not want to show user messages from users that he has blocked.</p>
+<p>  Parameters:<br />
+  <code class="inline">conversation_id</code> - ID of conversation. Requires integer<br />
+  <code class="inline">before_id</code> - ID of oldest known message. Requires integer<br />
+  <code class="inline">count</code> - Amount of requested messages. Requires integer<br />
+  <code class="inline">user_id</code> - ID of user. Requires integer</p>
+<p>  Returns list of messages.</p>
+
+  </section>
+</div>
+<div class="detail" id="get_users/1">
+  
+  
+  <div class="detail-header">
+    <a href="#get_users/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">get_users(conversation_id)</span>
+    
+      <a href="https://gitlab.thenflash.com/mwo/chat-server" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>  Get users of conversations.</p>
+<p>  Parameters:<br />
+  <code class="inline">conversation_id</code> - ID of conversation. Requires integer<br /></p>
+<p>  Returns list of users.</p>
+
+  </section>
+</div>
+<div class="detail" id="in_conversation?/2">
+  
+  
+  <div class="detail-header">
+    <a href="#in_conversation?/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">in_conversation?(conversation_id, user_id)</span>
+    
+      <a href="https://gitlab.thenflash.com/mwo/chat-server" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>  Check if user is in conversation?</p>
+<p>  Parameters:<br />
+  <code class="inline">conversation_id</code> - ID of conversation. Requires integer or binary<br />
+  <code class="inline">user_id</code> - ID of user. Requires integer<br /></p>
+<p>  Returns boolean.</p>
+
+  </section>
+</div>
+<div class="detail" id="new/2">
+  
+  
+  <div class="detail-header">
+    <a href="#new/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">new(name, users)</span>
+    
+      <a href="https://gitlab.thenflash.com/mwo/chat-server" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>  Function for creating new conversations.</p>
+<p>  Parameters:<br />
+  <code class="inline">name</code> - Name of created conversation. Requires binaary value.<br />
+  <code class="inline">users</code> - Users that will take part in conversation. Requires list.</p>
+<p>  Returns Tuple:<br/>
+  On success: <code class="inline">{:ok, conversation}</code>, where conversation is created conversation.<br />
+  On fail: <code class="inline">{:error, reason}</code>, where reason is atom representing reason for failing.</p>
+
+  </section>
+</div>
+<div class="detail" id="read/3">
+  
+  
+  <div class="detail-header">
+    <a href="#read/3" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">read(conversation_id, user_id, message_id)</span>
+    
+      <a href="https://gitlab.thenflash.com/mwo/chat-server" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>  Function for setting recently readed message for user on conversation.</p>
+<p>  Do not allow changing back.</p>
+<p>  Parameters:<br />
+  <code class="inline">conversation_id</code> - ID of conversation. Requires integer<br />
+  <code class="inline">user_id</code> - ID of user. Requires integer<br />
+  <code class="inline">message_id</code> - ID of message. Requires integer</p>
+<p>  Returns Tuple:<br/>
+  On success: <code class="inline">{:ok, nil}</code><br />
+  On fail: <code class="inline">{:error, reason}</code>, where reason is atom representing reason for failing.</p>
+
+  </section>
+</div>
+<div class="detail" id="remove_user/2">
+  
+  
+  <div class="detail-header">
+    <a href="#remove_user/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">remove_user(conversation_id, user_id)</span>
+    
+      <a href="https://gitlab.thenflash.com/mwo/chat-server" class="view-source" rel="help" title="View Source">
+       <span class="icon-code" aria-hidden="true"></span>
+       <span class="sr-only">View Source</span>
+     </a>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    <p>  Function for removing user from conversation.</p>
+<p>  Parameters:<br />
+  <code class="inline">conversation_id</code> - ID of conversation. Requires integer<br />
+  <code class="inline">user_id</code> - ID of user. Requires integer</p>
+<p>  Returns Tuple:<br/>
+  On success: <code class="inline">{:ok, conversation}</code>, where conversation is conversation that changed.<br />
+  On fail: <code class="inline">{:error, reason}</code>, where reason is atom representing reason for failing.</p>
+
+  </section>
+</div>
+
+        </section>
+      
+
+      
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.18.1),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle"><span class="sr-only">Switch theme</span></button>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-778c9ef903.js"></script>
+  
+  
+  
+  
+  </body>
+</html>
+
